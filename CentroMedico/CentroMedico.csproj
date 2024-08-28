@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Models\Dominio\" />
     <Folder Include="Models\ModeloVista\" />
     <Folder Include="Models\Dto\" />
     <Folder Include="Utilidades\" />
