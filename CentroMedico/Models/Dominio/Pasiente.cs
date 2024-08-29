@@ -5,9 +5,9 @@ namespace CentroMedico.Models.Dominio
     public class Paciente
     {
         public int Id { get; set; }
-        [StringLength(maximumLength:16,MinimumLength =13,ErrorMessage ="El {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
+        [StringLength(maximumLength:16,MinimumLength =13,ErrorMessage ="Los {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Nombres { get; set; } = null!;
-        [StringLength(maximumLength: 30, MinimumLength = 40, ErrorMessage = "El {0} no cumple con los requisitos de longitud. asegurese de que tenga entre  {1} y {2} caracteres. ")] 
+        [StringLength(maximumLength: 30, MinimumLength = 40, ErrorMessage = "Los {0} no cumple con los requisitos de longitud. asegurese de que tenga entre  {1} y {2} caracteres. ")] 
         public string Apellidos { get; set; } = null!;
         [StringLength(maximumLength: 12, MinimumLength = 10, ErrorMessage = " Fecha invalida. Asegurese de usar el formato correcto dia, mes y año separados por /.")]
         public DateTime FechaNacimiento { get; set; }
