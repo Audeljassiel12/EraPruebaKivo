@@ -1,4 +1,5 @@
 using CentroMedico.Models;
+using CentroMedico.Models.Dominio;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,8 +14,12 @@ namespace CentroMedico.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(Paciente paciente )
         {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
             return View();
         }
 

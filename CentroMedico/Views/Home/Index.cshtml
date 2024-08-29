@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CentroMedico.Models.Dominio.Paciente
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,6 +8,8 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div>Hola</div>
-
-<h2>Bienvenidos a Kivo su mejor eleccion</h2>
+<form asp-action="Index" asp-controller="Home">
+<input  asp-for="Nombre" />
+<span asp-validation-for="Nombre"></span>
+<button type="submit">Enviar</button>
+</form>

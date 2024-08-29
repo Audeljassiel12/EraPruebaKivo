@@ -1,14 +1,18 @@
-﻿namespace CentroMedico.Models.Dominio
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CentroMedico.Models.Dominio
 {
     public class Paciente
     {
-        public int PacienteID { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public int Id { get; set; }
+        [StringLength(maximumLength:60,MinimumLength =3,ErrorMessage ="El {0}  tiene que tener como maximo {1} y como mino {2}  ")]
+        public string Nombre { get; set; } = null!;
+        
+        public string Apellido { get; set; } = null!;
         public DateTime FechaNacimiento { get; set; }
-        public string Sexo { get; set; }
+        public string Sexo { get; set; }  = null !;
         public string Dirección { get; set; }
-        public string Teléfono { get; set; }
+        public string? Teléfono { get; set; }
         public string Email { get; set; }
         public string TipoSangre { get; set; }
         public string EstadoCivil { get; set; }
