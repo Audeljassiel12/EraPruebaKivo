@@ -7,7 +7,7 @@ namespace CentroMedico.Models.Dominio
         public int Id { get; set; }
         [StringLength(maximumLength:60,MinimumLength =3,ErrorMessage ="El {0}  tiene que tener como maximo {1} y como mino {2}  ")]
         public string Nombre { get; set; } = null!;
-        
+        [StringLength(maximumLength: 60, MinimumLength = 3, ErrorMessage = "El {0}  tiene que tener como maximo {1} y como mino {2}  ")] 
         public string Apellido { get; set; } = null!;
         public DateTime FechaNacimiento { get; set; }
         public string Sexo { get; set; }  = null !;
