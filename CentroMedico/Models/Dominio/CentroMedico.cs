@@ -18,7 +18,7 @@
 
     public class CentroMedico
     {
-        public int CentroMedicoID { get; set; } // Clave primaria
+        public int Id { get; set; } // Clave primaria
         public string Nombre { get; set; } // Nombre del centro médico
         public string Direccion { get; set; } // Dirección física
         public string Ciudad { get; set; } // Ciudad
@@ -37,6 +37,7 @@
         public ICollection<Paciente> Pacientes { get; set; } // Lista de pacientes asociados al centro
         public ICollection<Cita> Citas { get; set; } // Lista de citas asociadas al centro
         public ICollection<HorarioAtencion> HorarioAtencions { get; set; }
+        public ICollection<Suscripcion> Suscripciones { get; set; }
      
     }
 
