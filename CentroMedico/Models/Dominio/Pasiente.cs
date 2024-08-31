@@ -6,10 +6,10 @@ namespace CentroMedico.Models.Dominio
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Los {0} son requeridos para el siguiente paso ")]
-        [StringLength(maximumLength:16,MinimumLength =13,ErrorMessage ="Los {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
+        [StringLength(maximumLength:16,MinimumLength =13,ErrorMessage ="Los {0} no cumplen con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Nombres { get; set; } = null!;
         [Required(ErrorMessage = "Los {0} son requeridos para seguir el siguiente paso")]
-        [StringLength(maximumLength: 30, MinimumLength = 40, ErrorMessage = "Los {0} no cumple con los requisitos de longitud. asegurese de que tenga entre  {1} y {2} caracteres. ")] 
+        [StringLength(maximumLength: 40, MinimumLength = 30, ErrorMessage = "Los {0} no cumplen con los requisitos de longitud. asegurese de que tenga entre  {1} y {2} caracteres. ")] 
         public string Apellidos { get; set; } = null!;
         [Required(ErrorMessage = "La fecha de nacimiento es requerida para seguir el siguiente paso")] 
         [StringLength(maximumLength: 12, MinimumLength = 10, ErrorMessage = " Fecha invalida. Asegurese de usar el formato correcto dia, mes y año separados por /.")]

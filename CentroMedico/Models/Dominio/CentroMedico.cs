@@ -19,10 +19,20 @@
     public class CentroMedico
     {
         public int Id { get; set; } // Clave primaria
+        [Requered(ErrorMensage = "El {0} del  Centro Medico  es requeridos para el siguiente paso")]
+        [StringLength(maximumLength: 20, MinimumLength = 10, ErrorMessage = " El {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Nombre { get; set; } // Nombre del centro médico
+        [Requered(ErrorMensage = "La {0} de el Centro Medico  es requeridos para el siguiente paso")]
+        [StringLength(maximumLength: 30, MinimumLength = 20, ErrorMessage = " La {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Direccion { get; set; } // Dirección física
+        [Requered(ErrorMensage = "La {0} de del Centro Medico es requeridos para el siguiente paso")]
+        [StringLength(maximumLength: 15, MinimumLength = 10, ErrorMessage = " La nombre {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Ciudad { get; set; } // Ciudad
+        [Requered(ErrorMensage = "El {0} del Centro Medico  es requeridos para el siguiente paso")]
+        [StringLength(maximumLength: 15, MinimumLength = 13, ErrorMessage = " El nombre del  {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public Departamento Departamento { get; set; } // Departamento 
+        [Requered(ErrorMensage = "El {0} del Centro Medico es requeridos para el siguiente paso")]
+        [StringLength(maximumLength: 10, MinimumLength = 8, ErrorMessage = " El {0} no cumple con los requisitos de longitud. asegúrese de que tenga entre  {1} y {2} caracteres.")]
         public string Telefono { get; set; } // Número de teléfono
         public string SitioWeb { get; set; } // Sitio web del centro médico
         public string Tipo { get; set; } // Tipo de centro (por ejemplo , consultorio , clinica)
